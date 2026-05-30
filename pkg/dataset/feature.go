@@ -22,16 +22,6 @@ type BinaryFeature struct {
 func (bf *BinaryFeature) GetName() string      { return bf.Name }
 func (bf *BinaryFeature) GetType() FeatureType { return BinaryType }
 
-// Mapped using One-Hot encoding
-type CategoricalFeature struct {
-	Name   string
-	Type   FeatureType
-	Values []uint8
-}
-
-func (cf *CategoricalFeature) GetName() string      { return cf.Name }
-func (cf *CategoricalFeature) GetType() FeatureType { return CategoricalType }
-
 type Float64Feature struct {
 	Name   string
 	Type   FeatureType
